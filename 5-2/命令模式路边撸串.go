@@ -12,8 +12,8 @@ func (c *Cooker) MakeChuaner() {
 	fmt.Println("烤肉师傅烤了羊肉串")
 }
 
-//抽象的命令
-type Command interface {
+// 抽象的命令
+type Command1 interface {
 	Make()
 }
 type CommandCookChicken struct {
@@ -33,7 +33,7 @@ func (cmd *CommandCookChuaner) Make() {
 }
 
 type WaiterMM struct {
-	CmdList []Command
+	CmdList []Command1
 }
 
 func (w *WaiterMM) Notify() {
